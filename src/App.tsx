@@ -8,7 +8,8 @@ const App = () => {
   const [lines, setLines] = useState<number[][]>([[], [], [], [], []]);
   const [person, setPerson] = useState<number>(0);
 
-  const time = 3000;
+  const time = 1000;
+  let test = 0;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,6 +26,8 @@ const App = () => {
         );
         return newLines;
       });
+      test += 1;
+      console.log(test);
     }, time);
     return () => clearInterval(interval);
   }, []);
@@ -70,6 +73,7 @@ const App = () => {
         onClick={(e) => handleSubmit(e)}
         >Add Person to Queue</button>
         <p>Every {time / 1000} seconds a product is scanned and removed from the queue</p>
+        <p>{test}</p>
       </form>
       <div className="lines">
         {lines.map((line, index) => (
