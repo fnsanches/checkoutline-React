@@ -8,4 +8,5 @@ The app is built with React and Typescript.
 
 ## Known issues
 
-- The app is not rendering precisely the lines, it is skipping a cycle.
+- <s>The app is not rendering precisely the lines, it is skipping a cycle.</s> 
+- Fixed by removing StrictMode (which causes the app to render twice as a way to detect unsafe lifecycles)

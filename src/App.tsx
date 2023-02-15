@@ -29,6 +29,7 @@ const App = () => {
       test += 1;
       console.log(test);
     }, time);
+    
     return () => clearInterval(interval);
   }, []);
 
